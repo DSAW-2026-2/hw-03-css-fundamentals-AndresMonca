@@ -1,0 +1,32 @@
+{
+  "name": "HW03 — CSS Fundamentals",
+  "homeworkNumber": 3,
+  "structure": {
+    "maxPoints": 20,
+    "requiredFiles": [
+      { "path": "index.html", "description": "HTML landing page from HW02", "points": 8 },
+      { "path": "styles.css", "description": "External stylesheet (no inline styles)", "points": 8 },
+      { "path": "REFLECTION.md", "description": "150-word written explanation of a non-obvious CSS decision", "points": 4 }
+    ],
+    "requiredFolders": []
+  },
+  "quality": {
+    "maxPoints": 20,
+    "checks": ["htmlhint", "stylelint"]
+  },
+  "deployment": {
+    "maxPoints": 20,
+    "type": "github-pages"
+  },
+  "acceptance": {
+    "maxPoints": 40,
+    "sourcePaths": ["index.html", "styles.css", "REFLECTION.md"],
+    "criteria": [
+      "All styles are in the external styles.css file — no inline styles (style='...') appear anywhere in index.html",
+      "CSS uses either Flexbox or Grid (or both) for at least one layout section, demonstrating understanding of the layout model",
+      "The page is responsive and usable at three breakpoints: 375px (mobile), 768px (tablet), and 1280px (desktop) using media queries",
+      "The CSS demonstrates understanding of the box model: margin, padding, and border are used intentionally and correctly",
+      "REFLECTION.md contains at least 120 words explaining a specific, non-obvious CSS decision the student made — not a generic description of what CSS does"
+    ]
+  }
+}
