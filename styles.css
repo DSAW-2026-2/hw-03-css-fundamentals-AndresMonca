@@ -1,0 +1,479 @@
+/* =========================================================
+   PlayReal — styles.css
+   HW03 · CSS Fundamentals
+   Order: 1) reset/tokens 2) base elements 3) layout (header,
+   containers) 4) components (cards, chips, buttons, form)
+   5) section-specific tweaks 6) media queries (mobile-first:
+   375px base, 768px tablet, 1280px desktop)
+   ========================================================= */
+
+/* ---------- 1. Reset & design tokens ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #1877F2;
+  --blue-dark: #0B4EB3;
+  --blue-soft: #E8F1FF;
+  --blue-soft-2: #EEF6FF;
+  --green: #5CF264;
+  --text-main: #101828;
+  --text-secondary: #667085;
+  --border: #D9E6F7;
+  --radius: 16px;
+  --max-width: 1180px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+  background: #FFF;
+  line-height: 1.55;
+}
+
+/* ---------- 2. Base elements ---------- */
+h1, h2, h3 {
+  color: var(--text-main);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+p {
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+footer a {
+  color: #FFF;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 3. Layout: header & sections ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: rgb(255 255 255 / 94%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+/* Flexbox layout: logo + nav row */
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+}
+
+.links a {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+/* Every top-level section shares horizontal padding and a
+   centered content column via max-width + auto margins */
+section {
+  padding: 48px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+#justificacion,
+#usuarios,
+#contacto {
+  background: var(--blue-soft-2);
+  max-width: 100%;
+}
+
+#justificacion > *,
+#usuarios > *,
+#contacto > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- 4. Components ---------- */
+
+/* Chip */
+.chip {
+  display: inline-block;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+/* Buttons (real <button> and .btn links) */
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button {
+  align-self: flex-start;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--blue-dark);
+  text-decoration: none;
+}
+
+/* Hero actions — Flexbox layout section */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+
+.hero-actions a {
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hero-actions a:first-child {
+  background: var(--blue);
+  color: #fff;
+}
+
+.hero-actions a:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.links a:hover {
+  color: var(--blue-dark);
+  border-bottom-color: var(--blue);
+  text-decoration: none;
+}
+
+/* Dashboard preview card */
+.dashboard-preview {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 16px 32px -20px rgb(11 78 179 / 35%);
+}
+
+.dashboard-preview button {
+  width: 100%;
+  margin: 12px 0;
+}
+
+/* Cards grid — used in Problema and Justificación (CSS Grid layout) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cards-grid article,
+.story-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 20px -16px rgb(16 24 40 / 30%);
+}
+
+.card-negative h3::before {
+  content: "✕ ";
+  color: #C0392B;
+}
+
+.card-positive h3::before {
+  content: "✓ ";
+  color: #1E7A2E;
+}
+
+/* Stories grid — used in Historias (CSS Grid layout) */
+.stories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* Team cards on about.html reuse the PlayReal card language. */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.team-card {
+  background: #FFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 20px -16px rgb(16 24 40 / 30%);
+}
+
+.page-hero {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* Flow steps — Flexbox layout section */
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.flow span {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--blue-dark);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+  max-width: 480px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+input,
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+/* Wireframe box — Flexbox layout section */
+.wireframe-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-top: 20px;
+}
+
+/* Checklist grid */
+.checklist {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.checklist li {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Footer */
+footer {
+  background: var(--text-main);
+  color: #98A2B3;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   5. Media queries — mobile-first
+   375px  = mobile refinement
+   768px  = tablet
+   1280px = desktop
+   ========================================================= */
+
+/* ---- Mobile: 375px ---- */
+@media (width >= 375px) {
+  .nav-wrap {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  #inicio {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+/* ---- Tablet: 768px ---- */
+@media (width >= 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .checklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wireframe-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ---- Desktop: 1280px ---- */
+@media (width >= 1280px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  /* Hero becomes a two-column CSS Grid: text column (col 1)
+     and dashboard preview pinned to column 2, spanning every
+     row so it stays vertically centered next to the text. */
+  #inicio {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    column-gap: 48px;
+    align-items: center;
+  }
+
+  #inicio .dashboard-preview {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

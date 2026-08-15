@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayReal - Group challenges for students</title>
+<meta name="description" content="PlayReal is a web application for creating group challenges, uploading evidence, voting, and tracking rankings among friends.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav-wrap">
+    <div class="logo">PlayReal</div>
+    <nav class="links">
+      <a href="#problema">Problem</a>
+      <a href="#justificacion">Web app</a>
+      <a href="#solucion">Solution</a>
+      <a href="#usuarios">Users</a>
+      <a href="#historias">Stories</a>
+      <a href="#wireframe">Wireframe</a>
+      <a href="#contacto">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="inicio">
+    <span class="chip">Academic project · Phase 1</span>
+    <h1>PlayReal: group challenges people actually complete.</h1>
+    <p>A web application to create challenges with friends, upload evidence, vote for the best submission, and see who leads the group ranking.</p>
+    <div class="hero-actions">
+      <a href="#wireframe">View wireframe</a>
+      <a href="#problema">Explore the problem</a>
+    </div>
+
+    <div class="dashboard-preview">
+      <p><strong>Active challenge:</strong> In progress</p>
+      <p>Read for 20 minutes every day</p>
+      <p>3 days left · 6 participants</p>
+      <button>Upload evidence</button>
+      <p>Points: 128 | Streak: 5 | Ranking: #2</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problema">
+    <span class="eyebrow">The problem</span>
+    <h2>Challenges are organized in chats and get lost along the way</h2>
+    <p>Groups of friends start habit challenges, but evidence, votes, and points become scattered among messages. Over time, the challenge is abandoned because there is no proper follow-up or group support.</p>
+
+    <div class="cards-grid">
+      <article>
+        <h3>Target user</h3>
+        <p>University students who create habit challenges with friends or classmates in small groups: reading, drinking water, studying, exercising, practicing a language, and more.</p>
+      </article>
+
+      <article>
+        <h3>Need</h3>
+        <p>Centralize the active challenge, completion evidence, voting, points, streak, and group ranking in one place.</p>
+      </article>
+
+      <article>
+        <h3>Why challenges are abandoned</h3>
+        <p>Without a dedicated space, no one knows for sure who completed the challenge, there is no fair comparison between participants, and group motivation fades.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- JUSTIFICATION -->
+  <section id="justificacion">
+    <span class="eyebrow">Web application justification</span>
+    <h2>Why the tools they already use are not enough</h2>
+    <p>PlayReal is a web application, not a native mobile app. It needs collaborative follow-up, statistics, and daily updates from several users at the same time, which generic tools do not handle well.</p>
+
+    <div class="cards-grid">
+      <article class="card-negative">
+        <h3>WhatsApp / Instagram</h3>
+        <p>They are useful for communication, but they do not track points, rankings, or an organized completion history. Evidence gets lost between messages.</p>
+      </article>
+
+      <article class="card-negative">
+        <h3>Spreadsheet</h3>
+        <p>It requires someone to update it manually for everyone. There is no visual evidence, voting, or motivating experience for the group.</p>
+      </article>
+
+      <article class="card-positive">
+        <h3>PlayReal (web)</h3>
+        <p>One place accessible from any browser, with automatic follow-up, evidence voting, and real-time ranking for the whole group.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solucion">
+    <span class="eyebrow">The solution</span>
+    <h2>A simple flow from start to finish</h2>
+    <p>PlayReal organizes each challenge into a clear flow that every group member can follow without confusion.</p>
+
+    <div class="flow">
+      <span>Group</span> → <span>Challenge</span> → <span>Evidence</span> → <span>Voting</span> → <span>Scoring</span> → <span>Ranking</span>
+    </div>
+  </section>
+
+  <!-- USERS -->
+  <section id="usuarios">
+    <span class="eyebrow">Target user</span>
+    <h2>Designed for small groups of students</h2>
+    <p>University students who want to stay motivated with habits such as reading, studying, exercising, drinking water, or avoiding unnecessary spending, alongside friends or classmates who support their progress.</p>
+  </section>
+
+  <!-- USER STORIES -->
+  <section id="historias">
+    <span class="eyebrow">User stories</span>
+    <h2>Stories in the As a / I want / So that format</h2>
+
+    <div class="stories-grid">
+      <article class="story-card">
+        <h3>Create a private group</h3>
+        <p><strong>As a</strong> user, <strong>I want</strong> to create a private group <strong>so that</strong> I can invite my friends and participate in challenges with them.</p>
+      </article>
+
+      <article class="story-card">
+        <h3>Check the active challenge</h3>
+        <p><strong>As a</strong> participant, <strong>I want</strong> to check the active challenge <strong>so that</strong> I know what I need to do and when I need to complete it.</p>
+      </article>
+
+      <article class="story-card">
+        <h3>Upload evidence</h3>
+        <p><strong>As a</strong> participant, <strong>I want</strong> to upload a photo with a comment <strong>so that</strong> I can prove that I completed the challenge.</p>
+      </article>
+
+      <article class="story-card">
+        <h3>Vote for evidence</h3>
+        <p><strong>As a</strong> participant, <strong>I want</strong> to vote for a submission <strong>so that</strong> I can help choose the best participation.</p>
+      </article>
+
+      <article class="story-card">
+        <h3>View the ranking</h3>
+        <p><strong>As a</strong> participant, <strong>I want</strong> to view the group ranking <strong>so that</strong> I know my position and points.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT / REGISTRATION -->
+  <section id="contacto">
+    <span class="eyebrow">Join the pilot program</span>
+    <h2>Sign up to try PlayReal</h2>
+    <p>Leave your information so we can notify you when access to the first version opens.</p>
+
+    <form action="#" method="post">
+      <div>
+        <label for="nombre">Full name</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Your name" required>
+      </div>
+
+      <div>
+        <label for="correo">Email address</label>
+        <input type="email" id="correo" name="correo" placeholder="yourname@university.edu" required>
+      </div>
+
+      <div>
+        <label for="universidad">University</label>
+        <input type="text" id="universidad" name="universidad" placeholder="Your university name">
+      </div>
+
+      <div>
+        <label for="comentario">Tell us which challenge you would like to do with your friends</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder="For example: reading, exercise, studying..."></textarea>
+      </div>
+
+      <button type="submit">Send registration</button>
+    </form>
+  </section>
+
+  <!-- WIREFRAME -->
+  <section id="wireframe">
+    <span class="eyebrow">Wireframe</span>
+    <h2>Annotated web Home in Figma</h2>
+    <div class="wireframe-box">
+      <div>
+        <p>View the complete design through the public Figma link.</p>
+      </div>
+      <a class="btn" href="https://www.figma.com/make/N0d9HVxNgSnsa5966sK7Yv/PlayReal?p=f" target="_blank" rel="noopener">Open in Figma</a>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section id="ia">
+    <span class="eyebrow">AI usage</span>
+    <h2>Transparency about AI usage</h2>
+    <p><strong>Prompt used:</strong> How can I implement CSS in my existing index file, which currently has no visual styling? Give me basic examples and commands for styling.</p>
+    <p><strong>What AI contributed:</strong> For the CSS in our index, we defined color variables and base styles to keep everything consistent. We used <code>position: sticky</code> in the header so it remains visible without covering content while scrolling. CSS Grid was applied to the hero and the cards for the problem, justification, stories, and checklist, while Flexbox was used in the navigation, buttons, and form. We added focus states to inputs for accessibility. The page was also built mobile-first, with breakpoints at 768px and 1280px so it works well on mobile, tablet, and desktop.</p>
+    <p><strong>What was modified and why:</strong> The team manually adjusted the text in each section to make it closer to how we describe the project, changed the color palette proposed by AI to better align with PlayReal's visual identity, reorganized information in some sections so the flow is easier to understand, and added sections that AI had not initially included to better cover the evaluation criteria.</p>
+  </section>
+
+  <!-- CRITERIA -->
+  <section id="criterios">
+    <span class="eyebrow">Evaluation checklist</span>
+    <h2>Phase 1 acceptance criteria</h2>
+    <ul class="checklist">
+      <li>A real problem identified in the context of chats and social media, with disorganized evidence.</li>
+      <li>A specific user: university students who complete challenges with friends.</li>
+      <li>An unmet need: no centralized space for evidence, votes, points, and ranking.</li>
+      <li>Web application justification compared with WhatsApp, Instagram, and a spreadsheet.</li>
+      <li>At least three user stories in the As a / I want / So that format.</li>
+      <li>A public Figma link with the annotated web Home screen.</li>
+      <li>GitHub Pages deployment with a URL that responds with HTTP 200.</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <span class="eyebrow">The PlayReal team</span>
+    <h2>Meet the people behind the project</h2>
+    <div class="wireframe-box">
+      <p>Learn about the team members, their responsibilities, and how they will continue developing PlayReal throughout the semester.</p>
+      <a class="btn" href="about.html" target="_blank" rel="noopener">Open team page</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Academic project - Phase 1 · PlayReal</p>
+</footer>
+
+</body>
+</html>
