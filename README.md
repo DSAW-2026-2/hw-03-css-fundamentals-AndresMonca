@@ -1,5 +1,15 @@
 # HW03 — CSS Fundamentals
 
+## Student Information
+
+**Name:**  
+Edwin Andres Montaño Castañeda
+
+**GitHub Pages:**  
+https://dsaw-2026-2.github.io/hw-03-css-fundamentals-AndresMonca/
+
+---
+
 **Week 3 · DSAW · Universidad de La Sabana**
 
 ## Objective
